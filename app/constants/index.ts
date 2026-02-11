@@ -113,47 +113,24 @@ const experiences = [
 ];
 
 const testimonials = [
-	{
-		id: 1,
-		testimonial:
-			"Behance is a social media platform owned by Adobe whose main focus is to showcase and discover creative work.",
-		name: "Om Patel",
-		image: "/socialmedia/behance.svg",
-		link: "https://www.behance.net/omthecreator",
-	},
-	{
-		id: 2,
-		testimonial:
-			"LinkedIn is a business and employment-focused social media platform that works through websites and mobile apps.",
-		name: "Om Patel",
-		image: "/socialmedia/linkedin.svg",
-		link: "https://www.linkedin.com/in/om-patel-401068143/",
-	},
-	{
-		id: 3,
-		testimonial:
-			"Dribbble is a self-promotion and social networking platform for digital designers and creatives. It serves as a design portfolio.",
-		name: "Om Patel",
-		image: "/socialmedia/dribble.svg",
-		link: "https://dribbble.com/om2121",
-	},
-	{
-		id: 4,
-		testimonial:
-			"Also do check out my UI/UX Portfolio where I have shared by design studies.",
-		name: "Om Patel",
-		image: "/socialmedia/portfolio.svg",
-		link: "https://omthecreator.netlify.app/",
-	},
-	{
-		id: 5,
-		testimonial:
-			"Also do check out my Github Profile where I have shared all my codes from basic to advanced.",
-		name: "Om Patel",
-		image: "/tech/github.webp",
-		link: "https://github.com/omunite215",
-	},
+  {
+    id: 2,
+    testimonial:
+      "Explore my LinkedIn profile to learn more about my professional journey, skills, certifications, and experiences that reflect my growth as a developer.",
+    name: "Saniya Singhal",
+    image: "/socialmedia/linkedin.svg",
+    link: "https://www.linkedin.com/in/saniya-singhal-2aa120283/",
+  },
+  {
+    id: 5,
+    testimonial:
+      "Visit my GitHub to discover the projects I’ve built, the technologies I’ve worked with, and my continuous learning through real-world coding practice.",
+    name: "Saniya Singhal",
+    image: "/tech/github.webp",
+    link: "https://github.com/saniya100305",
+  },
 ];
+
 
 
 const projects :{
