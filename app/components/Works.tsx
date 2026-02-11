@@ -106,7 +106,7 @@ const Works = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className="sectionSubText">My work</p>
-				<h2 className="sectionHeadText">Projects.</h2>
+				<h2 className="sectionHeadText">Projects</h2>
 			</motion.div>
 
 			<div className="w-full flex">

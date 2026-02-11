@@ -51,7 +51,7 @@ const About = () => {
   className="styles.sectionHeadText" 
   style={{ fontSize: "60px", fontWeight: "800" }}
 >
-  Overview.
+  Overview
 </h4>
 
 
