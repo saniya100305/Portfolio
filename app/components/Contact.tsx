@@ -33,9 +33,9 @@ const Contact = () => {
 				"template_jjegxdr",
 				{
 					from_name: form.name,
-					to_name: "Om Patel",
+					to_name: "Saniya Singhal",
 					from_email: form.email,
-					to_email: "omunite21@gmail.com",
+					to_email: "saniyasinghal10@gmail.com",
 					message: form.message,
 				},
 				"VeFeVdEHL9F9_i6xp",
@@ -43,7 +43,7 @@ const Contact = () => {
 			.then(() => {
 				setLoading(false);
 				alert(
-					"A humble thanks for reaching me out. I will respond to you as soon as possible.",
+					"Thanks for reaching out! I’ll respond shortly.",
 				);
 				setForm({
 					name: "",
