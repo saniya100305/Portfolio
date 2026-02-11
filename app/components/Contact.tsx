@@ -43,7 +43,7 @@ const Contact = () => {
 			.then(() => {
 				setLoading(false);
 				alert(
-					"Thanks for reaching out! I’ll respond shortly.",
+					"Thanks for reaching out! I’ll respond shortly.-",
 				);
 				setForm({
 					name: "",

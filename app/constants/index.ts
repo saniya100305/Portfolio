@@ -66,10 +66,6 @@ const technologies = [
 		icon: "/tech/tailwind.webp",
 	},
 	{
-		name: "Three JS",
-		icon: "/tech/threejs.webp",
-	},
-	{
 		name: "git",
 		icon: "/tech/git.webp",
 	},

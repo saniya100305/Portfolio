@@ -47,7 +47,14 @@ const About = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className="sectionSubText">Introduction</p>
-				<h2 className="styles.sectionHeadText">Overview.</h2>
+				<h4 
+  className="styles.sectionHeadText" 
+  style={{ fontSize: "60px", fontWeight: "800" }}
+>
+  Overview.
+</h4>
+
+
 			</motion.div>
 
 			<motion.p
