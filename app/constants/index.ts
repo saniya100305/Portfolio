@@ -46,16 +46,8 @@ const technologies = [
 		icon: "/tech/javascript.webp",
 	},
 	{
-		name: "TypeScript",
-		icon: "/tech/typescript.webp",
-	},
-	{
 		name: "React JS",
 		icon: "/tech/reactjs.webp",
-	},
-	{
-		name: "Next.JS",
-		icon: "/tech/nextjs.svg",
 	},
 	{
 		name: "Redux Toolkit",
@@ -68,10 +60,6 @@ const technologies = [
 	{
 		name: "git",
 		icon: "/tech/git.webp",
-	},
-	{
-		name: "figma",
-		icon: "/tech/figma.webp",
 	},
 	{
 		name: "wordpress",
