@@ -119,6 +119,14 @@ const testimonials = [
     image: "/tech/github.webp",
     link: "https://github.com/saniya100305",
   },
+  {
+    id: 3,
+    testimonial:
+      "Check out my LeetCode profile to see my problem-solving skills, coding challenges I've completed, and my journey in mastering data structures and algorithms.",
+    name: "Saniya Singhal",
+    image: "/tech/leetcode.png",
+    link: "https://leetcode.com/u/Saniya_Singhal/",
+  },
 ];
 
 const projects :{
@@ -150,7 +158,7 @@ const projects :{
 				color: "green-text-gradient",
 			},
 		],
-		image: "/projectimg/avm.webp",
+		image: "/projectimg/Chatflow.jpg",
 		source_code_link: "https://github.com/saniya100305",
 	},
 	{

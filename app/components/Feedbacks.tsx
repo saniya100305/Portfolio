@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Tilt } from "react-tilt";
 import { testimonials } from "../constants";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 import { SectionWrapper } from "./HigherOrderComponents";
@@ -24,35 +25,63 @@ const FeedbackCard = ({
 }: FeedbackCardProps) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl shadow-card 
-               hover:scale-105 transition-transform duration-300 w-full"
+    className="w-full"
   >
-    <p className="text-white font-black text-[48px]">&quot;</p>
-
-    <div className="mt-4">
-      <p className="text-white tracking-wider text-[18px] leading-relaxed">
-        {testimonial}
-      </p>
-
-      <div className="mt-8 flex justify-between items-center">
-        <div className="flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span>
-            {name}
-          </p>
+    <Tilt
+      options={{
+        max: 25,
+        scale: 1.02,
+        speed: 450,
+      }}
+      className="relative bg-tertiary p-[1px] rounded-3xl w-full h-full
+                 hover:shadow-2xl transition-all duration-500
+                 border border-white/5"
+    >
+      <div className="bg-tertiary rounded-3xl p-8 h-full flex flex-col">
+        
+        {/* Quote Icon */}
+        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#915EFF] to-[#915EFF]/60 
+                        flex items-center justify-center mb-6">
+          <p className="text-white font-black text-[24px]">&quot;</p>
         </div>
 
-        <Link href={link} target="_blank">
-          <Image
-            src={image}
-            width={45}
-            height={45}
-            alt={`feedback by ${name}`}
-            className="w-11 h-11 object-contain cursor-pointer"
-          />
-        </Link>
+        {/* Content */}
+        <div className="flex-1 flex flex-col">
+          <p className="text-white/90 tracking-wide text-[15px] leading-relaxed 
+                        flex-1 min-h-[120px] font-light">
+            {testimonial}
+          </p>
+
+          {/* Footer */}
+          <div className="mt-8 pt-6 border-t border-white/10 
+                          flex justify-between items-center">
+            <div className="flex flex-col">
+              <p className="text-white font-semibold text-[16px]">
+                <span className="text-[#915EFF]">@</span>
+                {name}
+              </p>
+            </div>
+
+            <Link href={link} target="_blank">
+              <div className="w-12 h-12 rounded-full bg-black-200/50
+                              backdrop-blur-sm border border-white/10
+                              flex items-center justify-center
+                              hover:scale-110 hover:border-[#915EFF]/50 hover:bg-[#915EFF]/10
+                              transition-all duration-300 cursor-pointer
+                              group">
+                <Image
+                  src={image}
+                  width={24}
+                  height={24}
+                  alt={`feedback by ${name}`}
+                  className="w-6 h-6 object-contain group-hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </Tilt>
   </motion.div>
 );
 
@@ -71,8 +100,8 @@ const Feedbacks = () => {
 
       {/* Cards Section */}
       <div className="paddingX mt-12 pb-20 
-                grid md:grid-cols-2 grid-cols-1 
-                gap-12 max-w-5xl mx-auto">
+                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                gap-8 max-w-7xl mx-auto items-stretch">
 
         {testimonials.map((testimonial, index) => (
           <FeedbackCard
