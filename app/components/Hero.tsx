@@ -12,9 +12,9 @@ const Hero = () => {
 					<div className="w-1 sm:h-80 h-40 violet-gradient" />
 				</div>
 				<div>
-					<h1 className="heroHeadText text-white">
+					<h2 className="heroHeadText text-white">
 						Hey, I&apos;m <span className="text-[#915EFF] ">Saniya</span>
-					</h1>
+					</h2>
 					<p className="heroSubText">
 						A Software Engineer
 					</p>

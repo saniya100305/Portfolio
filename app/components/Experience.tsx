@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         background: "#1d1836",
         color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -39,7 +39,9 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[24px] font-bold">
+          {experience.title}
+        </h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
@@ -66,10 +68,16 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className="styles.sectionSubText text-center">
-          What I have done so far
-        </p>
-        <h2 className="sectionHeadText text-center">Certifications & Training</h2>
+        {/* Gradient Styled Subtitle */}
+       <p className="sectionSubText text-center">
+  My Credentials
+</p>
+
+
+        {/* Main Heading */}
+        <h2 className="sectionHeadText text-center">
+          Certifications & Training
+        </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

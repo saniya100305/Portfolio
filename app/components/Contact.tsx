@@ -64,7 +64,7 @@ const Contact = () => {
 				className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
 			>
 				<p className="heroSubText">Get in Touch</p>
-				<h3 className="heroHeadText">Contact</h3>
+				<h2 className="heroHeadText">Contact</h2>
 				<form
 					ref={formRef}
 					onSubmit={handleSubmit}

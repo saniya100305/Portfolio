@@ -15,19 +15,19 @@ export const navLinks = [
 
 const services = [
 	{
-		title: "UI/UX Designer",
+		title: "Software Engineer",
 		icon: "/backend.webp",
 	},
 	{
-		title: "Full Stack Web Developer",
+		title: "Full Stack Developer",
 		icon: "/web.webp",
 	},
 	{
-		title: "App Developer",
+		title: "Backend Engineer",
 		icon: "/mobile.webp",
 	},
 	{
-		title: "Software Engineer",
+		title: "UI/UX Developer",
 		icon: "/creator.webp",
 	},
 ];
@@ -75,8 +75,8 @@ const experiences = [
 	{
 		title: "Data Structures & Algorithms Certification",
 		company_name: "Apna College (SIGMA Batch)",
-		icon: "/company/avm.webp",
-		iconBg: "#383E56",
+		icon: "/projectimg/DSA_Logo.jpg",
+		iconBg: "#E6DEDD",
 		date: "June 2024 - January 2025",
 		points: [
 			"Built a strong foundation in Data Structures and Algorithms through structured learning and hands-on coding practice.",
@@ -88,7 +88,7 @@ const experiences = [
 	{
 		title: "Full Stack Web Development Certification",
 		company_name: "Apna College (SIGMA Batch)",
-		icon: "/company/sparkbright.webp",
+		icon: "/projectimg/Development_Logo.png",
 		iconBg: "#E6DEDD",
 		date: "August 2024 - June 2025",
 		points: [
@@ -143,7 +143,7 @@ const projects :{
 	{
 		name: "ChatFlow",
 		description:
-			"A multi-user desktop chat application built with Java Swing, featuring real-time group communication through socket programming and multi-threaded architecture for seamless concurrent client handling and message broadcasting.",
+			"ChatFlow is a desktop chat application that allows users to join groups, send and receive messages instantly, and communicate in real-time. It provides a fast, smooth, and collaborative messaging experience.",
 		tags: [
 			{
 				name: "java",
@@ -159,12 +159,12 @@ const projects :{
 			},
 		],
 		image: "/projectimg/Chatflow.jpg",
-		source_code_link: "https://github.com/saniya100305",
+		source_code_link: "https://github.com/saniya100305/ChatFlow",
 	},
 	{
 		name: "MyBlog",
 		description:
-			"A full-stack MERN blogging platform with JWT authentication and role-based access control. Features RESTful API integration, optimized MongoDB performance, and an intuitive CMS for creating and managing content.",
+			"MyBlog is a platform where users can create, publish, and share articles easily. It offers a clean, user-friendly interface for writing, reading, and engaging with content seamlessly.",
 		tags: [
 			{
 				name: "react",
@@ -183,13 +183,13 @@ const projects :{
 				color: "orange-text-gradient",
 			},
 		],
-		image: "/projectimg/sparkbright.png",
-		source_code_link: "https://github.com/saniya100305",
+		image: "/projectimg/MyBlog.jpg",
+		source_code_link: "https://github.com/saniya100305/MyBlog",
 	},
 	{
 		name: "JetSetGo",
 		description:
-			"A responsive travel booking platform offering comprehensive flight, hotel, and vacation package reservations. Leverages JSON-based data management for dynamic travel listings, real-time pricing, and streamlined user bookings.",
+			"JetSetGo is a travel booking platform that allows users to plan trips, book flights, and manage itineraries easily. It provides a seamless, fast, and user-friendly travel experience.",
 		tags: [
 			{
 				name: "html",
@@ -204,7 +204,7 @@ const projects :{
 				color: "green-text-gradient",
 			},
 		],
-		image: "/projectimg/hoobank.webp",
+		image: "/projectimg/JetSetGo.jpg",
 		source_code_link: "https://github.com/saniya100305",
 	},
 ];
