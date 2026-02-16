@@ -80,8 +80,8 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col w-full overflow-x-hidden">
-        <VerticalTimeline>
+      <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col w-full overflow-x-hidden min-w-0">
+        <VerticalTimeline className="vertical-timeline-mobile">
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}

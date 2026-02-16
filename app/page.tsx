@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
 	return (
-		<div className="relative z-0 bg-primary font-sans overflow-x-hidden min-h-screen w-full max-w-[100vw]">
+		<div className="relative z-0 bg-primary font-sans overflow-x-hidden min-w-0">
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 				<Navbar />
 				<Hero />

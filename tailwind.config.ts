@@ -25,9 +25,6 @@ const config: Config = {
 			},
 			screens: {
 				xs: "450px",
-				"max-xs": { max: "449px" },
-				"max-sm": { max: "639px" },
-				"max-md": { max: "767px" },
 			},
 			backgroundImage: {
 				"hero-pattern": "url('/herobg.webp')",

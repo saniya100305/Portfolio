@@ -5,25 +5,25 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
 	return (
-		<section className="relative w-full min-h-screen h-screen max-h-[100dvh] mx-auto">
-			<div className="paddingX absolute inset-0 top-[72px] xs:top-[88px] sm:top-[100px] md:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-3 sm:gap-5">
-				<div className="flex flex-col justify-center items-center mt-2 sm:mt-5 shrink-0">
-					<div className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 rounded-full bg-[#915EFF]" />
-					<div className="w-0.5 xs:w-1 sm:h-72 md:h-80 h-32 xs:h-40 violet-gradient" />
+		<section className="relative w-full h-screen mx-auto min-w-0 overflow-hidden">
+			<div className="paddingX absolute inset-0 top-[100px] max-md:top-[90px] max-w-7xl mx-auto flex flex-row items-start gap-3 max-sm:gap-2">
+				<div className="flex flex-col justify-center items-center mt-5 max-sm:mt-2 shrink-0">
+					<div className="w-5 h-5 max-sm:w-4 max-sm:h-4 rounded-full bg-[#915EFF] " />
+					<div className="w-1 sm:h-80 h-40 violet-gradient" />
 				</div>
 				<div className="min-w-0 flex-1">
-					<h2 className="heroHeadText text-white break-words">
-						Hey, I&apos;m <span className="text-[#915EFF]">Saniya</span>
+					<h2 className="heroHeadText text-white max-sm:text-[32px] max-[380px]:text-[28px] break-words">
+						Hey, I&apos;m <span className="text-[#915EFF] ">Saniya</span>
 					</h2>
-					<p className="heroSubText mt-1">
+					<p className="heroSubText max-sm:text-[12px]">
 						A Software Engineer
 					</p>
 				</div>
 			</div>
 			<ComputersCanvas />
-			<div className="absolute bottom-6 xs:bottom-4 sm:bottom-2 w-full flex justify-center items-center pointer-events-none">
-				<a href="#about" className="pointer-events-auto">
-					<div className="w-[28px] h-[52px] xs:w-[35px] xs:h-[64px] rounded-3xl border-2 xs:border-4 border-secondary flex justify-center items-start p-1.5 xs:p-2">
+			<div className="absolute xs:bottom-2 bottom-32 max-sm:bottom-24 w-full flex justify-center items-center">
+				<a href="#about">
+					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
 						<motion.div
 							animate={{ y: [0, 24, 0] }}
 							transition={{

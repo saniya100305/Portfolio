@@ -4,31 +4,31 @@
 
 @layer utilities {
   .paddingX {
-    @apply px-4 xs:px-6 sm:px-10 md:px-14 lg:px-16;
+    @apply sm:px-16 px-6;
   }
 
   .paddingY {
-    @apply py-6 sm:py-10 md:py-14 lg:py-16;
+    @apply sm:py-16 py-6;
   }
 
   .padding {
-    @apply px-4 xs:px-6 sm:px-10 md:px-14 lg:px-16 py-8 sm:py-10 md:py-14 lg:py-16;
+    @apply sm:px-16 px-6 sm:py-16 py-10;
   }
 
   .heroHeadText {
-    @apply font-black text-white text-[36px] xs:text-[44px] sm:text-[54px] md:text-[64px] lg:text-[80px] lg:leading-[98px] mt-2;
+    @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2;
   }
 
   .heroSubText {
-    @apply text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] text-secondary uppercase tracking-wider;
+    @apply sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider;
   }
 
   .sectionHeadText {
-    @apply text-white font-black text-[28px] xs:text-[34px] sm:text-[44px] md:text-[52px] lg:text-[60px];
+    @apply text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px];
   }
 
   .sectionSubText {
-    @apply text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] text-secondary uppercase tracking-wider;
+    @apply sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider;
   }
 }
 
@@ -41,25 +41,25 @@
   color-scheme: dark;
 }
 
-html {
-  overflow-x: hidden;
-}
-
-/* Vertical timeline responsive overrides */
+/* Mobile: prevent horizontal overflow (desktop unchanged) */
 @media (max-width: 768px) {
-  .vertical-timeline-element-content {
-    padding: 0.875rem 1rem !important;
-    margin-left: 52px !important;
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
-  .vertical-timeline-element-date {
-    font-size: 0.8rem !important;
+}
+/* Small mobile: tighter padding (320px–480px) */
+@media (max-width: 480px) {
+  .paddingX {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .vertical-timeline-element-icon {
-    width: 32px !important;
-    height: 32px !important;
+  .paddingY {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
-  .vertical-timeline::before {
-    left: 15px !important;
+  .padding {
+    padding: 1.25rem 1rem;
   }
 }
 
@@ -255,5 +255,23 @@ html {
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+/* Mobile-only: vertical timeline (no desktop changes) */
+@media (max-width: 768px) {
+  .vertical-timeline.vertical-timeline-mobile {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em 0;
+  }
+  .vertical-timeline.vertical-timeline-mobile .vertical-timeline-element-content {
+    max-width: 100%;
+    width: calc(100% - 60px);
+    box-sizing: border-box;
+    padding: 0.75em;
+  }
+  .vertical-timeline.vertical-timeline-mobile .vertical-timeline-element {
+    margin: 1.25em 0;
   }
 }

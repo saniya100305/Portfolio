@@ -74,27 +74,34 @@ const Navbar = () => {
 					<ResumeButton />
 				</div>
 
-				<div className="sm:hidden flex flex-1 justify-end items-center">
-					<Image
-						src={toggle ? "/close.svg" : "/menu.svg"}
-						width={28}
-						height={28}
-						alt="menu"
-						className="w-[28px] h-[28px] object-contain"
+				<div className="sm:hidden flex flex-1 justify-end items-center min-w-0">
+					{/* Touch-friendly menu button (min 44px tap target) */}
+					<button
+						type="button"
+						aria-label={toggle ? "Close menu" : "Open menu"}
+						className="p-3 -m-3 touch-manipulation"
 						onClick={() => setToggle(!toggle)}
-					/>
+					>
+						<Image
+							src={toggle ? "/close.svg" : "/menu.svg"}
+							width={28}
+							height={28}
+							alt=""
+							className="w-7 h-7 min-w-[28px] min-h-[28px] object-contain"
+						/>
+					</button>
 
 					<div
 						className={`${
 							!toggle ? "hidden" : "flex"
-						} p-5 black-gradient absolute top-14 right-0 mx-2 xs:mx-4 my-2 min-w-[160px] max-w-[calc(100vw-2rem)] z-10 rounded-xl shadow-xl`}
+						} p-4 max-md:p-5 black-gradient absolute top-full right-0 mt-2 mx-2 max-md:mx-4 my-2 min-w-[140px] max-w-[min(280px,calc(100vw-2rem))] z-10 rounded-xl`}
 					>
-						<ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+						<ul className="list-none flex justify-end items-stretch flex-1 flex-col gap-0 w-full">
 							{navLinks.map((nav) => (
 								// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
 								<li
 									key={nav.id}
-									className={`font-poppins font-medium cursor-pointer text-[16px] ${
+									className={`font-poppins font-medium cursor-pointer text-[16px] py-3 px-4 min-h-[44px] flex items-center touch-manipulation rounded-lg ${
 										active === nav.title ? "text-white" : "text-secondary"
 									}`}
 									onClick={() => {
@@ -102,11 +109,11 @@ const Navbar = () => {
 										setActive(nav.title);
 									}}
 								>
-									<Link href={`#${nav.id}`}>{nav.title}</Link>
+									<Link href={`#${nav.id}`} className="block w-full">{nav.title}</Link>
 								</li>
 							))}
-							<li>
-								<div className="mt-2">
+							<li className="py-3 px-4 min-h-[44px] flex items-center">
+								<div className="mt-0">
 									<ResumeButton />
 								</div>
 							</li>
