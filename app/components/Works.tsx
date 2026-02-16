@@ -42,7 +42,7 @@ const ProjectCard = ({
 				}}
 				className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
 			>
-				<div className="relative w-full h-[230px]">
+				<div className="relative w-full h-[180px] xs:h-[200px] sm:h-[220px] md:h-[230px]">
 					<Image
 						src={image}
 						width={1000}
@@ -86,15 +86,15 @@ const ProjectCard = ({
 				</div>
 
 				<div className="mt-5">
-					<h3 className="text-white font-bold text-[24px]">{name}</h3>
-					<p className="mt-2 text-secondary text-[14px]">{description}</p>
+					<h3 className="text-white font-bold text-[18px] sm:text-[20px] md:text-[24px]">{name}</h3>
+					<p className="mt-2 text-secondary text-[12px] sm:text-[13px] md:text-[14px] line-clamp-2 sm:line-clamp-3">{description}</p>
 				</div>
 
-				<div className="mt-4 flex flex-wrap gap-2">
+				<div className="mt-3 sm:mt-4 flex flex-wrap gap-1.5 sm:gap-2">
 					{tags.map((tag) => (
 						<p
 							key={`${name}-${tag.name}`}
-							className={`text-[14px] ${tag.color}`}
+							className={`text-[11px] sm:text-[12px] md:text-[14px] ${tag.color}`}
 						>
 							#{tag.name}
 						</p>
@@ -113,10 +113,10 @@ const Works = () => {
 				<h2 className="sectionHeadText">Projects</h2>
 			</motion.div>
 
-			<div className="w-full flex">
+			<div className="w-full flex flex-col min-w-0">
 				<motion.p
 					variants={fadeIn("", "", 0.1, 1)}
-					className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+					className="mt-3 text-secondary text-[14px] sm:text-[15px] md:text-[17px] max-w-3xl leading-relaxed"
 				>
 					Following projects showcases my skills and experience through
 					real-world examples of my work. Each project is briefly described with
@@ -126,7 +126,7 @@ const Works = () => {
 				</motion.p>
 			</div>
 
-			<div className="mt-20 flex flex-wrap gap-7">
+			<div className="mt-12 sm:mt-16 md:mt-20 flex flex-wrap justify-center sm:justify-start gap-5 sm:gap-6 md:gap-7">
 				{projects.map((project, index) => (
 					<ProjectCard key={`project-${index}`} index={index} {...project} />
 				))}

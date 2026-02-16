@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins as FontSans } from "next/font/google";
 import "@/app/styles/globals.css";
 
@@ -7,6 +7,12 @@ const fontSans = FontSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-sans",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fontSans.variable}>{children}</body>
+      <body className={`${fontSans.variable} font-sans antialiased overflow-x-hidden min-w-0`}>{children}</body>
     </html>
   );
 }
