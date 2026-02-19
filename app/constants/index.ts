@@ -33,43 +33,17 @@ const services = [
 ];
 
 const technologies = [
-	{
-		name: "HTML 5",
-		icon: "/tech/html.webp",
-	},
-	{
-		name: "CSS 3",
-		icon: "/tech/css.webp",
-	},
-	{
-		name: "JavaScript",
-		icon: "/tech/javascript.webp",
-	},
-	{
-		name: "React JS",
-		icon: "/tech/reactjs.webp",
-	},
-	{
-		name: "Redux Toolkit",
-		icon: "/tech/redux.webp",
-	},
-	{
-		name: "Tailwind CSS",
-		icon: "/tech/tailwind.webp",
-	},
-	{
-		name: "git",
-		icon: "/tech/git.webp",
-	},
-	{
-		name: "wordpress",
-		icon: "/tech/wordpress.webp",
-	},
-	{
-		name: "bootstrap",
-		icon: "/tech/bootstrap.webp",
-	},
-];
+	{ name: "HTML 5", icon: "/tech/html.webp" },
+	{ name: "CSS 3", icon: "/tech/css.webp" },
+	{ name: "JavaScript", icon: "/tech/javascript.webp" },
+	{ name: "React JS", icon: "/tech/reactjs.webp" },
+	{ name: "Redux Toolkit", icon: "/tech/redux.webp" },
+	{ name: "Tailwind CSS", icon: "/tech/tailwind.webp" },
+	{ name: "Git", icon: "/tech/git.webp" },
+	{ name: "WordPress", icon: "/tech/wordpress.webp" },
+	{ name: "Bootstrap", icon: "/tech/bootstrap.webp" },
+  ];
+  
 
 const experiences = [
 	{
