@@ -275,3 +275,62 @@
     margin: 1.25em 0;
   }
 }
+
+/* Mobile-only: Hero glass cards (no desktop changes) */
+@media (max-width: 768px) {
+  .hero-mobile-visual {
+    position: absolute;
+    inset: 0;
+    top: 150px; /* leaves space for the hero text block */
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .hero-mobile-visual__inner {
+    width: min(92vw, 420px);
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-mobile-card {
+    width: calc((min(92vw, 420px) - 14px) / 2);
+    max-width: 200px;
+    aspect-ratio: 1 / 1.08;
+    border-radius: 22px;
+    background-image: url("/hero_image.png");
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    animation: heroMobileFloat 6.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+
+  .hero-mobile-card--left {
+    background-position: left center;
+  }
+
+  .hero-mobile-card--right {
+    background-position: right center;
+    animation-delay: 0.9s; /* slight offset for cinematic feel */
+  }
+}
+
+@keyframes heroMobileFloat {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0px, 0);
+  }
+}
